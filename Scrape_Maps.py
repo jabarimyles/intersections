@@ -2,7 +2,7 @@
 """
 Created on Mon Oct 28 11:41:08 2019
 
-@author: winado
+@author: jmyles
 """
 
 """
