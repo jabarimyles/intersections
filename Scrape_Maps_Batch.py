@@ -1,25 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Oct 28 11:41:08 2019
 
-@author: winado
-"""
-
-"""
-Stitch together Google Maps images from lat, long coordinates
-Based on work by heltonbiker and BenElgar
-Changes: 
-* updated for Python 3
-* added Google Maps API key (compliance with T&C, although can set to None)
-* handle http request exceptions
-
-With contributions from Eric Toombs.
-Changes:
-* Dramatically simplified the maths.
-* Set a more reasonable default logo cutoff.
-* Added global constants for logo cutoff and max image size.
-* Translated a couple presumably Portuguese variable names to English.
-"""
 
 import requests
 from io import BytesIO
@@ -41,8 +21,8 @@ import matplotlib.image as mpimg
 import pandas as pd
 import time 
 
-indsn = "C:/Users/winado/Desktop/Python/Google API/traffic_intersection_stack.sas7bdat"
-outdir = "C:/Users/winado/Desktop/Python/Google API/sat_images"
+indsn = "./traffic_intersection_stack.sas7bdat"
+outdir = "./Google API/sat_images"
 
 intersections = pd.read_sas(indsn)
 df = intersections[['type', 'lat', 'long', 'angle', 'id' ]]
